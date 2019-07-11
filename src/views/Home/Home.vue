@@ -148,10 +148,10 @@
 <script>
 // @ is an alias to /src
 import navBarBrand from "@/assets/group.svg";
-import collage from "@/assets/people/collage.jpg";
-import one from "@/assets/people/01.jpg";
-import two from "@/assets/people/03.jpg";
-import three from "@/assets/people/04.jpg";
+import collage from "@/assets/people/collage_1920x913.jpg";
+import one from "@/assets/people/01_425x638.jpg";
+import two from "@/assets/people/03_425x638.jpg";
+import three from "@/assets/people/04_425x638.jpg";
 export default {
   name: "home",
   data() {
