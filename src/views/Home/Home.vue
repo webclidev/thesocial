@@ -36,13 +36,30 @@
       </b-navbar>
     </div>
     <div class="container">
-      <img :src="collage" width="100%" alt="collage" />
+      <img
+        :src="collage"
+        class="d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block"
+        width="100%"
+        alt="collage"
+      />
+      <img :src="one" class="d-sm-none" width="100%" alt="first" />
+      <img :src="two" class="d-sm-none" width="100%" alt="first" />
+      <img :src="three" class="d-sm-none" width="100%" alt="first" />
+      <!-- shows up on tablet, desktop -->
       <div class="centered d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block">
         <h1>MEET YOUR GENES</h1>
         <h5
           class="text-capitalize"
         >commit to a healthier you, inspired by your genes - with 125+ genetic reports.</h5>
         <b-button pill size="lg" class="mt-2 font-weight-lg-light" variant="danger">shop now</b-button>
+      </div>
+      <!-- shows up on mobile only -->
+      <div class="centered d-sm-none">
+        <h4>MEET YOUR GENES</h4>
+        <h6
+          class="text-capitalize"
+        >commit to a healthier you, inspired by your genes - with 125+ genetic reports.</h6>
+        <b-button pill size="sm" class="mt-2 font-weight-lg-light" variant="danger">shop now</b-button>
       </div>
     </div>
     <div class="fixed-bottom">
@@ -132,12 +149,18 @@
 // @ is an alias to /src
 import navBarBrand from "@/assets/group.svg";
 import collage from "@/assets/people/collage.jpg";
+import one from "@/assets/people/01.jpg";
+import two from "@/assets/people/03.jpg";
+import three from "@/assets/people/04.jpg";
 export default {
   name: "home",
   data() {
     return {
       navBarBrand: navBarBrand,
       collage: collage,
+      one: one,
+      two: two,
+      three: three,
       path: this.$route.fullPath,
       form: {
         email: "",
